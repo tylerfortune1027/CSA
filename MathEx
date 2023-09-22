@@ -1,6 +1,9 @@
 public class MathEx {
     public static void main(String[] Strings){
         System.out.println(swap(125));
+        TimeLeft( 1, 51, 4, 30);
+         TimeLeft(3, 23, 5, 45);
+            TimeLeft( 2, 43, 7, 32);
     }
 
     public static int swap(int initial){
