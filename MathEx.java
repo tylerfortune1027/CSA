@@ -1,10 +1,10 @@
 public class MathEX {   
     public static void main(String [] args){
-         int y= swap(483);
+         int y= swap(123);
         System.out.println(y);
-        int x= swap (357);
+        int x= swap (456);
         System.out.println(x);
-        int w = swap(692);
+        int w = swap(789);
         System.out.println(w);
        
     }
