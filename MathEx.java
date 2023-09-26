@@ -1,9 +1,15 @@
 public class MathEx {
     public static void main(String[] Strings){
         System.out.println(swap(125));
-        TimeLeft( 1, 51, 4, 30);
-         TimeLeft(3, 23, 5, 45);
-            TimeLeft( 2, 43, 7, 32);
+         System.out.println(swap(115));
+         System.out.println(swap(769));
+    timeLeft( 1, 51, 4, 30);
+         timeLeft(3, 23, 5, 45);
+            timeLeft( 2, 43, 7, 32);
+            System.out.println(dayOfWeek(6,11));
+             System.out.println(dayOfWeek(5,27));
+              System.out.Println(dayOfWeek(2,13));
+            
     }
 
     public static int swap(int initial){
@@ -20,4 +26,10 @@ public class MathEx {
         System.out.println( b+" hours "+ c+ " minutes");
 
     }
+    public static void dayOfWeek(int day, int date){
+    int DateTotal= date%7 + (day-1);
+    
+
+    }
+   
 }
