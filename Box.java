@@ -35,7 +35,7 @@ public class Box {
         return v;
     }
     public String toString(){
-        String s = " a box with dimension " + length + "+ width + " + height;
+        String s = " a box with dimension " + length + " "+ width + " " + height;
         s+= "\nColor is " + color + " has a lid? " + hasALid;
         return s;
     }
@@ -72,6 +72,6 @@ public class Box {
         System.out.println(b2);
         
         boolean f = b1.isTaller(b3);
-        System.out.println("is b1 taller than b3 " + f);
+        System.out.println("is b1 taller than b3? " + f);
     }
 }
