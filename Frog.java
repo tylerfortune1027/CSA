@@ -40,8 +40,8 @@ public class Frog {
 		xPos = xPos-1;
 	}
 	public void visit(){
-		getXPos()
-		getyPos()
+		getXPos();
+		getyPos();
 	}
 	public void eatAFly()
 	{
