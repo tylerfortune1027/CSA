@@ -5,9 +5,8 @@ import javax.swing.JPanel;
 public class PollDisplayPanel extends JPanel
 {
   private String name1, name2, name3;
-  private int count1;
-  private int count2;
-  private int count3;
+  private int count1, count2, count3;
+ 
 
 
   public PollDisplayPanel(String nm1, String nm2, String nm3)
@@ -24,21 +23,21 @@ public class PollDisplayPanel extends JPanel
   // Increments count1
   public void vote1()
   {
-  count1= count1 + 1;
+  count1++ ;
  
   }
 
   // Increments count2
   public void vote2()
   {
-count2 = count2+1 ;
+  count2++ ;
  
   }
 
   // Increments count3
   public void vote3()
   {
-count3 = count3++ ;
+  count3++ ;
  
   }
 
@@ -77,22 +76,25 @@ count3 = count3++ ;
   {
     int total = count1 + count2 + count3;
     int fromDegree = 0;
-
+    System.out.println(total);
     if (total > 0)
     {
       int degrees;
       g.setColor(Color.RED);
       degrees = countToDegrees(count1, total);
+      System.out.println(degrees);
       drawSector(g, x, y, r, fromDegree, degrees);
-      System.out.println(0, 180);
+      fromDegree += degrees ;
       
-
       g.setColor(Color.GREEN);
-      degrees = countToDegrees(count1, total);
+      degrees = countToDegrees(count2, total);
+      System.out.println(degrees);
       drawSector(g, x, y, r, fromDegree, degrees);
+      fromDegree += degrees ;
       
       g.setColor(Color.BLUE);
       degrees = Math.max(360 - fromDegree, 0);
+      System.out.println(degrees);
       drawSector(g, x, y, r, fromDegree, degrees);
     }
     else
@@ -109,11 +111,11 @@ count3 = count3++ ;
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    g.drawString( name1+":"+ count1 , x - r, y);
+    g.drawString( name1 + count1 , x - r, y);
 
-    g.drawString(name2+": "+ count2 , x, y);
+    g.drawString(name2 + count2 , x, y);
 
-    g.drawString( name3 + ": " + count3, x + r, y);
+    g.drawString( name3 + count3, x + r, y);
 
 
     // Display the color squares:
@@ -131,9 +133,9 @@ count3 = count3++ ;
   // corresponds to count / total, rounded to the nearest integer.
   private int countToDegrees(int count, int total)
   {
-  //____________________________________________________
-
-    return 0;
+    if (total > 0)
+    return (int) Math.round(count * 360.0 / total);
+  return 0;
   }
 
 
