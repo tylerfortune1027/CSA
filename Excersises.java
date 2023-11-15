@@ -5,10 +5,22 @@ public class Excersises {
     // }
     
     public boolean isSooner(int month1, int day1, int year1, int month2, int day2, int year2){
-        if (year1 > year2)|| ((year1 == year2)&& month1 > month2)
+        if (year1 > year2) return true;
+        if (year2 > year1) return false;
+         
+        else if ( month1 > month2)
                 return true;
-        else
-        return false;
+        else if (month2 > month1)
+            return false;
+        
+        else if (day1 > day2 )
+                return true;
+        else if (day2 > day1)
+            return false;
+            
+       else 
+       return false;
+        
     }
 
     // public int findBestFit(int space, int size1, int size2){
