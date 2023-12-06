@@ -1,17 +1,15 @@
 public class WhileLoops {
     
-    public int addOdds(int n){
-        int sum = 0;
-        n = 3;
+    public static int addOdds(int n) {
+    int sum = 0; 
+    int i = 1; 
 
-        while (n % 2 == 1){
-        sum = n + 2;
-        }
-        return sum;
+    while (i <= n) { 
+        sum += i; 
+        i += 2;
     }
-    public static void main(String[] args) {
-        WhileLoops ab = new WhileLoops();
-        System.out.println(ab.addOdds(3));
+
+    return sum;  
     }
 }
 
