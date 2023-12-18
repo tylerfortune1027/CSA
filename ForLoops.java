@@ -19,14 +19,26 @@ public class ForLoops {
                     System.out.print(j);
                 } 
             }
-                 System.out.println();
+                 System.out.println();}
         }
+          public static void sillyNumbers2(){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 9; j >= 1; j--) {
+                for (int k = 0; k < j; k++) {
+                    System.out.print(j);
+                }
+            }
+            System.out.println();
+        }
+// public static void dollarsAndStars(){
+
+// }
     }
     public static void main(String[] args) {
         System.out.println("Q1: \n");
-        System.out.println(addEvens(10));
-        System.out.println(addEvens(100));
-        System.out.println(addEvens(1000));
+        System.out.println(addEvens(5));
+        System.out.println(addEvens(15));
+        System.out.println(addEvens(250));
         System.out.println("\n");
         System.out.println("Q2: \n");
         printSquaresBack(10);
@@ -45,7 +57,6 @@ public class ForLoops {
 
 }
 
-}
 
 
 
