@@ -5,11 +5,14 @@ public class StringsExcersises {
         word = txt.substring(1) + txt.charAt(0);
         return word;
     }
-    public static String convertName(String txt){
-        String word= "";
-        word = txt.substring ()
-
+public static String convertName(String s){
+        int comma = s.indexOf(","); 
+        String lastName = s.substring(0, comma); 
+        String firstName = s.substring(comma + 1); 
+        return firstName + " " + lastName; 
     }
+    public static String negative(String s){
+        return s.replace("0", "2").replace("1", "0").replace("2", "1");
 public static void main(String[] args) {
 
     System.out.println(scroll("Hello World"));
@@ -20,8 +23,8 @@ public static void main(String[] args) {
     System.out.println(convertName("Biden,Joe"));
     System.out.println(convertName("the Clown, Bozo"));
 
-    // System.out.println(negative("0010111001"));
-    // System.out.println(negative("11111111"));
+    System.out.println(negative("0010111001"));
+    System.out.println(negative("11111111"));
 
     // System.out.println("04/20/2014 becomes " + dateString("04/20/2014"));
 
