@@ -3,33 +3,53 @@ public class SoccerTeam {
     private int numLosses;
     private int ties;
 
+    private static int gamesPlayed = 0;
+    private static int goalsScored= 0;
+
     public SoccerTeam (int score){
-        numWins = 0;
-        numLosses = 0;
-        ties = 0;
+        this.numWins = 0;
+        this.numLosses = 0;
+        this.ties = 0;
     }
 
     public void played (SoccerTeam other, int myScore, int otherScore){
         if (myScore > otherScore){
-            numWins++;
+            this.numWins++;
             other.numLosses++;
         }
-        if (otherScore > myScore){
-            numLosses++;
+        else if (otherScore > myScore){
+            this.numLosses++;
             other.numWins++;
         }
         else {
-            ties++;
+            this.ties++;
             other.ties++;
             }
+        }
+    public int getPoints(){
+        return 3 * this.numWins + this.ties;
     }
-    public static int reset (){
-        
+    
+    public void reset(){
+        this.numWins= 0;
+        this.numLosses= 0;
+        this.ties= 0;
     }
+public int getGamesPlayed(){
+    return gamesPlayed;
+}
+public int getGoalsScored(){
+    return goalsScored;
+
+}
+public void startTournament(){
+    
+}
 
       
     public static void main(String[] args) {
             
+
         }
 }
 
